@@ -1,23 +1,23 @@
+import java.util.Scanner;
+
 public class Demo015 {
     public static void main(String[] args) {
-        int x = 5;
-        int y = 10;
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Unary Plus (+x): " + (+x));
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
 
-        
-        System.out.println("Unary Minus (-x): " + (-x));
-        System.out.println("Pre-increment (++x): " + (++x)); 
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
 
-        System.out.println("Post-increment (x++): " + (x++)); 
-        System.out.println("Value of x after post-increment: " + x);
+        System.out.println("Before swapping: num1 = " + num1 + ", num2 = " + num2);
 
-        
-        System.out.println("Pre-decrement (--y): " + (--y)); 
+        int temp = num1;
+        num1 = num2;
+        num2 = temp;
 
-        
-        System.out.println("Post-decrement (y--): " + (y--)); 
-        System.out.println("Value of y after post-decrement: " + y); 
+        System.out.println("After swapping: num1 = " + num1 + ", num2 = " + num2);
 
+        scanner.close();
     }
 }
